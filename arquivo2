@@ -1,0 +1,18 @@
+echo "Deseja Compactar?"
+read COM
+echo "Qual Pasta"
+
+
+
+if test "$COM" = "s"
+then
+tar -cvzf backup.gz *
+cp -rf backup.gz  /home/brito/Documentos/aula6
+rm -r /home/brito/'Área de Trabalho'/*
+fi
+
+
+if test "$COM" = "n"
+then
+cp -rf *  /home/brito/Documentos/aula6
+fi
